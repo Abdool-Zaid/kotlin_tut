@@ -1,1 +1,1 @@
-D:\2025 code\kotlin\hello_2\build\classes\kotlin\main\MainKt.class;D:\2025 code\kotlin\hello_2\build\classes\kotlin\main\lateinit_1.class
+D:\2025 code\kotlin\hello_2\build\classes\kotlin\main\MainKt.class
