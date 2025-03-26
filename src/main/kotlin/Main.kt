@@ -3,8 +3,13 @@ fun main() {
     val short_val : Short= 32767 // max (2^15)-1 16 bits
     val int_val : Int =  2147483647  // max (2^31) -1 32 bits
     val long_val : Long = 9223372036854775807 // max(2^63) -1 64 bits
+    val float_val : Float= 67.12f // must end with f  mantissa 6-7 32 bits
+    val double_val : Double = 67.67867823768 // mantissa 15-16 64 bits
+    val char_val : Char ='s' // must be single quote
+    val bool_val : Boolean = true
 
 
+    println(bool_val)
 
 //    var inp_1 = 34
 //    val inp_2 = "string of characters"
