@@ -1,9 +1,10 @@
 fun main(){
     val object_1 = obj(name = "object_1", location = "there")
-    val  object_2 = obj(object_1)
+    val object_2 = shape(vertices = 5, colour = "gold", name= "shape_1")
+    println(object_2.get_name())
 }
 
-class obj(
+open class obj(
     private val name: String = "default object",
     private var location:String= "here"
 ) {
@@ -22,5 +23,16 @@ class obj(
         this.location= place
     }
 
+
+}
+
+class shape(
+    private val vertices: Int= 3,
+    private var colour : String= "green",
+    private val name:String
+):obj(name = name, location = "default shape location"){
+init {
+    println("additionally $name is a shape")
+}
 
 }
