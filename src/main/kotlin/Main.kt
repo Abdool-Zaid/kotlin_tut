@@ -1,8 +1,9 @@
 fun main(){
  val obj_1 = Object("obj_1", 12)
     val obj1_clone= obj_1.copy()
-
+// underscore can be usesd to ommit fields 
     print("$obj_1, $obj1_clone")
+
 }
 
 
