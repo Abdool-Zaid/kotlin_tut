@@ -1,17 +1,40 @@
 fun main(){
+    var obj = Object("val_1", 2)
 
+//    let
+    obj?.let {// ref = <it>
+        println(it)
+        // last line is always returned
+    }
 
+//    run
+    val sb= StringBuilder()
+        sb.append("string_1")
+        sb.append("string_2")
+    sb.toString()
+    val sb_2 = sb.run{// ref = <this>
+        append("string_3")
+        append("string_4")
+        toString()
+    }
+    val sb_3 = with(obj){
+        "name : $name, \nage : $age "
+    }
+
+    println(sb_3)
 }
 
+//scope functions
+//1. let
+//2. run
+//3. with
+//4. apply
+//5. also
 
 
-sealed class view_state {
 
-    object loading_state :view_state()
-    data class success_state(var data: Some_data): view_state()
-    data class error_state(val error: Some_data): view_state()
 
-}
-data class Some_data(
-    val name :String
+class Object (
+    var name: String,
+    var age: Int
 )
