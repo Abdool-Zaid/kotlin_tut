@@ -1,25 +1,17 @@
-@OptIn(ExperimentalStdlibApi::class)
 fun main(){
-    val direction =Direction.East
-    println(direction.description())
 
-    for(dir in Direction.values()){
-        println(dir)
-    }
 
 }
 
 
-enum class Direction(private  val degrees : Int){// used for a fixed set of constants 
 
+sealed class view_state {
 
-    North(360),
-    East(90),
-    South(180),
-    West(270);
+    object loading_state :view_state()
+    data class success_state(var data: Some_data): view_state()
+    data class error_state(val error: Some_data): view_state()
 
-    fun  description() : String{
-
-    return  "the direction is $name and the degrees is  $degrees"
-    }
 }
+data class Some_data(
+    val name :String
+)
