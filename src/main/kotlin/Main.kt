@@ -1,12 +1,25 @@
+@OptIn(ExperimentalStdlibApi::class)
 fun main(){
- val obj_1 = Object("obj_1", 12)
-    val obj1_clone= obj_1.copy()
-// underscore can be usesd to ommit fields 
-    print("$obj_1, $obj1_clone")
+    val direction =Direction.East
+    println(direction.description())
+
+    for(dir in Direction.values()){
+        println(dir)
+    }
 
 }
 
 
-data class Object(val Name :String, val Number : Int){// must have at least 1 property, also cannot be extended in any way
+enum class Direction(private  val degrees : Int){// used for a fixed set of constants 
 
+
+    North(360),
+    East(90),
+    South(180),
+    West(270);
+
+    fun  description() : String{
+
+    return  "the direction is $name and the degrees is  $degrees"
+    }
 }
